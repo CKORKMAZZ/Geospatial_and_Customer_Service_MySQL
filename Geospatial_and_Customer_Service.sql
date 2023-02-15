@@ -8,7 +8,6 @@ DECLARE v_latitude , v_longitude , v_latitude_2 , v_longitude_2 , v_geo , v_geo_
 DECLARE v_min , v_max INT;
 
 SET v_min = 1 , v_geo_min = ~0;
-
 SELECT latitudes , longitudes INTO v_latitude_2 , v_longitude_2 FROM cities WHERE city = city_name;
 
 with cities AS (
@@ -83,9 +82,6 @@ END WHILE;
 END //
 
 CALL Geospatial('Berlin',@v_city);
-
-
-
 
 
 
